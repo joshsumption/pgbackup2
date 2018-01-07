@@ -5,8 +5,8 @@ from pgbackup import storage
 
 @pytest.fixture()
 def infile():
-    infile = tempfile.TemporaryFile('r+')
-    infile.write("Testing")
+    infile = tempfile.TemporaryFile('r+b')
+    infile.write(b"Testing")
     infile.seek(0)  # So you read entire file
     return infile
 

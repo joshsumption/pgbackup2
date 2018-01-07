@@ -37,7 +37,7 @@ def main():
         print("Backing database up to %s in S3 as %s" % (args.destination, file_name))
         storage.s3(client, dump.stdout, args.destination, file_name)
     else:
-        outfile = open(args.destination, 'w')
+        outfile = open(args.destination, 'w+b')
         print("Backing database up locally to %s" % outfile.name)
         storage.local(dump.stdout, outfile)
 

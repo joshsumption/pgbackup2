@@ -9,10 +9,12 @@ name = "pypi"
 
 pytest = "*"
 pytest-mock = "*"
+tox = "*"
 
 
 [packages]
 
+tox = "*"
 
 
 [requires]
